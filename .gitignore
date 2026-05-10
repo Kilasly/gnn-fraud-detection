@@ -1,6 +1,7 @@
 # Ignore datasets
 
 *.csv
+!demo_predictions.csv
 
 # Ignore model files
 
