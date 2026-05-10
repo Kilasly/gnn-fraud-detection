@@ -293,6 +293,8 @@ st.markdown(
 @st.cache_data
 def load_data():
 
+
+
     import os
 
     if os.path.exists(
@@ -309,20 +311,14 @@ def load_data():
             "demo_predictions.csv"
         )
 
-else:
+    edges = pd.DataFrame({
 
-    data = pd.read_csv(
-        "demo_predictions.csv"
-    )
+        "txId1": [1001, 1002, 1003, 1004],
 
-    edges = pd.read_csv(
-        "elliptic_txs_edgelist.csv"
-    )
+        "txId2": [1002, 1003, 1004, 1005]
+    })
 
     return data, edges
-
-
-data, edges = load_data()
 
 # ---------------------------------------------------------------
 # CALCULATE METRICS
