@@ -1,0 +1,15 @@
+# Ignore datasets
+
+*.csv
+
+# Ignore model files
+
+*.pt
+
+# Ignore virtual environment
+
+venv/
+
+# Ignore Python cache
+
+__pycache__/
