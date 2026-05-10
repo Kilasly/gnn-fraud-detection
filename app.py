@@ -293,15 +293,21 @@ st.markdown(
 @st.cache_data
 def load_data():
 
-import os
+    import os
 
-if os.path.exists(
-    "elliptic_gnn_predictions.csv"
-):
-
-    data = pd.read_csv(
+    if os.path.exists(
         "elliptic_gnn_predictions.csv"
-    )
+    ):
+
+        data = pd.read_csv(
+            "elliptic_gnn_predictions.csv"
+        )
+
+    else:
+
+        data = pd.read_csv(
+            "demo_predictions.csv"
+        )
 
 else:
 
